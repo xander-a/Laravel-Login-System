@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Test route
 Route::get('/hello', function () {
     return 'Hello World';
 });
 
+// User routes
 Route::get('/user', ['as' => 'user.index', 'uses' => 'App\Http\Controllers\UserController@index']);
 Route::get('/user/register', ['as' => 'user.register', 'uses' => 'App\Http\Controllers\UserController@register']);
 Route::post('/user/store', ['as' => 'user.store', 'uses' => 'App\Http\Controllers\UserController@store']);
